@@ -788,11 +788,10 @@ summary:focus-visible {
 .lead-grid article > span { color: var(--signal-dark); font-size: 8px; }
 .lead-grid h3 { margin: 98px 0 16px; font-size: clamp(25px, 2.5vw, 38px); letter-spacing: -0.045em; }
 .lead-grid p { margin: 0; color: var(--muted-dark); font-size: 12px; line-height: 1.65; }
-.team-list { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 70px; border-top: 1px solid var(--line); }
-.team-list > span { display: flex; min-height: 65px; align-items: center; gap: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 13px; }
-.team-list > span:nth-child(3n) { border-right: 0; }
-.team-list small { color: var(--pulse); font-family: var(--mono); font-size: 8px; }
-.affiliations { max-width: 1100px; margin: 34px 0 0; color: var(--muted-dark); font-size: 11px; line-height: 1.8; }
+.team-list { display: grid; margin: 70px 0 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
+.team-list > li { display: grid; min-height: 72px; grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr); align-items: center; gap: clamp(24px, 4vw, 72px); padding: 15px 0; border-bottom: 1px solid var(--line); }
+.team-list strong { font-size: clamp(16px, 1.5vw, 21px); font-weight: 650; letter-spacing: -0.02em; }
+.team-list span { color: var(--muted-dark); font-size: 13px; line-height: 1.55; }
 
 .faq {
   display: grid;
@@ -935,9 +934,6 @@ footer > p { max-width: 650px; margin: 0; color: var(--muted-dark); font-size: 1
   .timeline li { grid-template-columns: 96px 31px 1fr; }
   .timeline p { padding-left: 14px; font-size: 13px; }
   .timeline .deadline .timeline-date { padding-left: 8px; }
-  .team-list { grid-template-columns: repeat(2, 1fr); }
-  .team-list > span:nth-child(3n) { border-right: 1px solid var(--line); }
-  .team-list > span:nth-child(2n) { border-right: 0; }
   .final-cta h2 { font-size: clamp(61px, 17vw, 100px); }
   .final-row { align-items: flex-start; flex-direction: column; }
   footer { grid-template-columns: 1fr; }
@@ -958,8 +954,7 @@ footer > p { max-width: 650px; margin: 0; color: var(--muted-dark); font-size: 1
   .data-row small { font-size: 6px; }
   .score-components > div { grid-template-columns: 58px 1fr; gap: 12px; }
   .score-ring { width: 54px; height: 54px; }
-  .team-list { grid-template-columns: 1fr; }
-  .team-list > span { border-right: 0 !important; }
+  .team-list > li { grid-template-columns: 1fr; gap: 6px; padding: 16px 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
