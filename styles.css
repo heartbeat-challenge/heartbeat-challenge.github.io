@@ -227,8 +227,7 @@ summary:focus-visible {
 .protocol-note,
 .track-top,
 .score-card-head,
-.rules-grid article > span,
-.lead-grid article > span {
+.rules-grid article > span {
   font-family: var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -782,16 +781,12 @@ summary:focus-visible {
 .recognition-card p { margin: 64px 0 24px; font-size: clamp(17px, 1.8vw, 24px); font-weight: 560; line-height: 1.45; }
 .recognition-card small { display: block; padding-top: 24px; border-top: 1px solid var(--dark-line); color: var(--muted-dark); font-size: 11px; line-height: 1.6; }
 
-.lead-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); }
-.lead-grid article { min-height: 310px; padding: clamp(24px, 3vw, 40px); border-right: 1px solid var(--line); }
-.lead-grid article:last-child { border-right: 0; }
-.lead-grid article > span { color: var(--signal-dark); font-size: 8px; }
-.lead-grid h3 { margin: 98px 0 16px; font-size: clamp(25px, 2.5vw, 38px); letter-spacing: -0.045em; }
-.lead-grid p { margin: 0; color: var(--muted-dark); font-size: 12px; line-height: 1.65; }
-.team-list { display: grid; margin: 70px 0 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
+.team-list { display: grid; margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
 .team-list > li { display: grid; min-height: 72px; grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1.45fr); align-items: center; gap: clamp(24px, 4vw, 72px); padding: 15px 0; border-bottom: 1px solid var(--line); }
+.organizer-person { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
 .team-list strong { font-size: clamp(16px, 1.5vw, 21px); font-weight: 650; letter-spacing: -0.02em; }
-.team-list span { color: var(--muted-dark); font-size: 13px; line-height: 1.55; }
+.organizer-role { color: var(--signal-dark); font-family: var(--mono); font-size: 8px; font-weight: 700; letter-spacing: 0.08em; line-height: 1.5; text-transform: uppercase; }
+.organizer-affiliation { color: var(--muted-dark); font-size: 13px; line-height: 1.55; }
 
 .faq {
   display: grid;
@@ -905,15 +900,12 @@ footer > p { max-width: 650px; margin: 0; color: var(--muted-dark); font-size: 1
   .faq h2 { font-size: clamp(44px, 14vw, 72px); }
   .principles,
   .track-grid,
-  .score-grid,
-  .lead-grid { grid-template-columns: 1fr; }
+  .score-grid { grid-template-columns: 1fr; }
   .principles article { min-height: 220px; border-right: 0; border-bottom: 1px solid var(--dark-line); }
   .principles article:last-child { border-bottom: 0; }
   .principles h3 { margin-top: 48px; }
-  .track-card:first-child,
-  .lead-grid article { border-right: 0; border-bottom: 1px solid var(--line); }
+  .track-card:first-child { border-right: 0; border-bottom: 1px solid var(--line); }
   .score-card:not(:last-child) { border-right: 0; border-bottom: 1px solid var(--dark-line); }
-  .lead-grid article:last-child { border-bottom: 0; }
   .track-body { min-height: 0; }
   .case-pair { grid-template-columns: 1fr; }
   .data-head { display: none; }
