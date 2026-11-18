@@ -56,7 +56,7 @@
             <article class="track-card">
               <p class="card-label">TRACK I</p><h3>Reciprocal Audio Turn-Taking</h3>
               <p>Decide when to speak, keep listening, continue speaking, or yield. Distinguish pauses, backchannels, and side speech from genuine interruptions.</p>
-              <dl class="track-settings"><div><dt>Offline</dt><dd>Given an audio prefix and assistant instructions, select WAIT, RESPOND, CONTINUE, or YIELD. Submit one selected action per sample as JSON.</dd></div><div><dt>Online</dt><dd>Process audio as it arrives and generate speech. Submit output audio and timestamped JSON interaction logs.</dd></div></dl>
+              <dl class="track-settings"><div><dt>Offline</dt><dd>Given an audio prefix and assistant instructions, select an action (WAIT, RESPOND, CONTINUE, or YIELD) or a dialogue-content option. Submit one answer per sample as JSON.</dd></div><div><dt>Online</dt><dd>Process audio as it arrives and generate speech. Submit output audio and timestamped JSON interaction logs.</dd></div></dl>
               <p class="card-note">Offline and Online are evaluated and ranked separately.</p>
             </article>
             <article class="track-card">
@@ -93,16 +93,17 @@
         <section class="content-section" id="schedule" aria-labelledby="schedule-title">
           <div class="section-heading"><p class="section-kicker">04 / SCHEDULE</p><h2 id="schedule-title">Key dates</h2><p>All deadlines are 23:59 UTC unless otherwise stated.</p></div>
           <ol class="timeline">
-            <li class="past"><time datetime="2026-10-07">Oct 07, 2026</time><span>Website goes live and registration opens</span></li>
-            <li class="past"><time datetime="2026-10-27">Oct 27, 2026</time><span>Data and resources released</span></li>
-            <li class="upcoming next"><time datetime="2026-11-16">Nov 16, 2026</time><span>Development leaderboard opens</span></li>
-            <li class="upcoming"><time datetime="2026-12-02">Dec 02, 2026</time><span>Team membership frozen</span></li>
-            <li class="upcoming"><time datetime="2026-12-16">Dec 16, 2026</time><span>Development leaderboard closes</span></li>
-            <li class="upcoming deadline"><time datetime="2026-12-23">Dec 23, 2026</time><span>Final container submission deadline</span></li>
-            <li class="upcoming"><time datetime="2026-12-30">Dec 30, 2026</time><span>Rankings and paper invitations</span></li>
-            <li class="upcoming"><time datetime="2027-01-07">Jan 07, 2027</time><span>Invited two-page papers due</span></li>
-            <li class="upcoming"><time datetime="2027-01-28">Jan 28, 2027</time><span>Camera-ready two-page papers due</span></li>
-            <li class="upcoming"><time datetime="2027-05-16">May 16, 2027</time><span>ICASSP 2027 opens</span></li>
+            <li class="past"><time datetime="2026-10-07">Oct 07, 2026</time><span>Website Goes Live and Registration Opens</span></li>
+            <li class="past"><time datetime="2026-10-27">Oct 27, 2026</time><span>Data and Resources Released</span></li>
+            <li class="upcoming next"><time datetime="2026-11-18">Nov 18, 2026</time><span>Baseline Release</span></li>
+            <li class="upcoming"><time datetime="2026-11-20">Nov 20, 2026</time><span>Development Leaderboard Opens (Dev Set)</span></li>
+            <li class="upcoming"><time datetime="2026-12-02">Dec 02, 2026</time><span>Evaluation Leaderboard Opens (Hidden Test Set) &amp; Team Membership Is Frozen</span></li>
+            <li class="upcoming"><time datetime="2026-12-22">Dec 22, 2026</time><span>Both Leaderboards Close</span></li>
+            <li class="upcoming deadline"><time datetime="2026-12-25">Dec 25, 2026</time><span>Final Container Submission Deadline</span></li>
+            <li class="upcoming"><time datetime="2026-12-30">Dec 30, 2026</time><span>Rankings and Paper Invitations</span></li>
+            <li class="upcoming"><time datetime="2027-01-07">Jan 07, 2027</time><span>Invited Two-Page Papers Due</span></li>
+            <li class="upcoming"><time datetime="2027-01-28">Jan 28, 2027</time><span>Camera-Ready Two-Page Papers Due</span></li>
+            <li class="upcoming"><time datetime="2027-05-16">May 16, 2027</time><span>ICASSP 2027 Opens</span></li>
           </ol>
           <div class="recognition-note"><h3>From the challenge to ICASSP 2027</h3><p>Each track will have a winner. Up to five audited teams will be invited to submit two-page ICASSP papers and present at the SPGC session in Toronto. Invitations consider rank, technical diversity, reproducibility, and balanced track coverage.</p></div>
         </section>
@@ -110,11 +111,11 @@
         <section class="content-section" id="participation" aria-labelledby="participation-title">
           <div class="section-heading"><p class="section-kicker">05 / PARTICIPATION</p><h2 id="participation-title">Participation Guidelines</h2></div>
           <div class="participation-grid">
-            <article><h3>1. Tasks and Submissions</h3><div><p>Each team may submit one final system configuration per task. Two development submissions per team per day.</p><p>Track I (Offline), Task 1 includes equal proportions of action-selection (WAIT, RESPOND, CONTINUE, YIELD) and dialogue-content questions in both the Dev Set and hidden test set. All questions have four answer options. The JSON submission format and evaluation scripts will be released soon.</p></div></article>
+            <article><h3>1. Tasks and Submissions</h3><div><p>Each team may submit one final system configuration per task. Each team may make two leaderboard submissions per day in total across all tasks and both leaderboards.</p><p>Track I (Offline), Task 1 includes equal proportions of action-selection (WAIT, RESPOND, CONTINUE, YIELD) and dialogue-content questions in both the Dev Set and hidden test set. All questions have four answer options. The JSON submission format and evaluation scripts will be released soon.</p></div></article>
             <article><h3>2. Data and Models</h3><p>External datasets must be publicly available under open licenses. Openly released pretrained models, including research-only and non-commercial models, are permitted under their respective licenses. Closed-source LLMs are prohibited, and <strong>models must have fewer than 30B parameters</strong>. No data or model declarations are required. Training may continue until the final submission deadline.</p></article>
             <article><h3>3. Model Configuration</h3><p>Teams may share a base model across tasks and train task-specific adapters or classification heads. Ensembles of independently trained models or adapters within a task are prohibited.</p></article>
-            <article><h3>4. Evaluation Integrity</h3><p>The Dev Set is for evaluation only and must not be used for training, calibration, or adaptation. Evaluation data must not be manually annotated, modified, or used for clustering or unsupervised learning. Accessing hidden labels or metadata and any form of evaluation-set leakage are prohibited.</p></article>
-            <article><h3>5. Evaluation Environment</h3><p>Evaluation will run on <strong>8 × A100 80GB GPUs</strong>. Resource limits, runtime, storage, model-loading requirements, and network policies will be specified in the container submission instructions.</p></article>
+            <article><h3>4. Evaluation Integrity</h3><p>The Dev Set is the development set and may be used for validation, checkpoint selection, and hyperparameter tuning, but not as training data. Neither Dev nor hidden test data may be manually annotated, modified, or used for clustering or unsupervised learning. Accessing non-public test labels or metadata and any form of evaluation-set leakage are prohibited.</p></article>
+            <article><h3>5. Evaluation Environment</h3><p>The evaluation platform has <strong>8 × A100 80GB GPUs</strong> in total. Resource limits, runtime, storage, model-loading requirements, and network policies will be specified in the container submission instructions.</p></article>
             <article><h3>6. Eligibility</h3><p>Organizers and their PhD students are ineligible; disclose other institutional conflicts.</p></article>
           </div>
         </section>
